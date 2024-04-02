@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'DrukWide';
+  src: url('../fonts/DrukWide-Medium-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DrukWide';
+  src: url('../fonts/DrukWide-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DrukWide';
+  src: url('../fonts/DrukWide-Heavy-Trial.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Atyp';
+  src: url('../fonts/AtypKidoTRIAL-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atyp';
+  src: url('../fonts/AtypKidoTRIAL-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
