@@ -70,15 +70,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // // timeline
-    const ITERATION_DELAY = 400;
+    const ITERATION_DELAY = 200;
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+    await pixelate(4);
+    await delay(ITERATION_DELAY);
     await pixelate(8);
     await delay(ITERATION_DELAY);
+    await pixelate(12);
+    await delay(ITERATION_DELAY);
     await pixelate(16);
+    await delay(ITERATION_DELAY);
+    await pixelate(24);
     await delay(ITERATION_DELAY);
     await pixelate(32);
     await delay(ITERATION_DELAY);
     await pixelate(48);
+    await delay(ITERATION_DELAY);
+    await pixelate(64);
+    await delay(ITERATION_DELAY);
+    await pixelate(80);
     await delay(ITERATION_DELAY);
     await pixelate(96);
 
