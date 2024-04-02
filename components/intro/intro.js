@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // // timeline
-    const ITERATION_DELAY = 200;
+    const ITERATION_DELAY = 120;
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
     await pixelate(4);
     await delay(ITERATION_DELAY);
@@ -80,13 +80,23 @@ document.addEventListener('DOMContentLoaded', () => {
     await delay(ITERATION_DELAY);
     await pixelate(16);
     await delay(ITERATION_DELAY);
+    await pixelate(20);
+    await delay(ITERATION_DELAY);
     await pixelate(24);
+    await delay(ITERATION_DELAY);
+    await pixelate(28);
     await delay(ITERATION_DELAY);
     await pixelate(32);
     await delay(ITERATION_DELAY);
+    await pixelate(40);
+    await delay(ITERATION_DELAY);
     await pixelate(48);
     await delay(ITERATION_DELAY);
+    await pixelate(56);
+    await delay(ITERATION_DELAY);
     await pixelate(64);
+    await delay(ITERATION_DELAY);
+    await pixelate(72);
     await delay(ITERATION_DELAY);
     await pixelate(80);
     await delay(ITERATION_DELAY);
@@ -123,14 +133,19 @@ document.addEventListener('DOMContentLoaded', () => {
     .to(".intro__content-title", { translateY: '-15vh' })
     .to(".intro__content-text", { top: '-10vh' }, 'start')
 
-  tl.addLabel("middle")
-    .to(".intro__absoluteImg--left", { translateY: '-80vh' }, "middle")
-    .to(".intro__absoluteImg--right", { translateY: '-100vh' }, "middle")
+  tl.addLabel("leftImg")
+    .to(".intro__absoluteImg--left", { translateY: '-60vh' }, "leftImg")
+
+  tl.addLabel("rightImg")
+    .to(".intro__absoluteImg--right", { translateY: '-90vh' }, "rightImg")
 
   tl.add(() => {
     animDepixelate(document.querySelector('.intro__absoluteImg--left'))
+  }, "leftImg");
+
+  tl.add(() => {
     animDepixelate(document.querySelector('.intro__absoluteImg--right'))
-  }, "middle");
+  }, "rightImg");
 
   function repeatTransform() {
     const leftImg = document.querySelector('.intro__absoluteImg--left');
