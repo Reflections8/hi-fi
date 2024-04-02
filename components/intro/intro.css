@@ -1,10 +1,10 @@
 .intro {
-  height: 800px;
   background-color: #04211F;
   color: white;
   overflow: hidden;
   position: fixed;
   width: 100%;
+  height: 100vh;
 }
 
 .intro__header {
@@ -76,7 +76,7 @@
 
 .intro__content-title {
   display: flex;
-  padding-top: 156px;
+  padding-top: 30vh;
   text-transform: uppercase;
   color: #ECFB5C;
   font-size: 80px;
@@ -98,7 +98,7 @@
   max-width: 295px;
   width: 100%;
   position: relative;
-  top: 200px;
+  top: 50vh;
 }
 
 .intro__content-text-top {

@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // // timeline
-    const ITERATION_DELAY = 1000;
+    const ITERATION_DELAY = 400;
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
     await pixelate(8);
     await delay(ITERATION_DELAY);
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       start: "top top",
       end: "+=500",
       delay: 10,
-      scrub: 3,
+      scrub: 8,
       snap: {
         snapTo: "labels",
         duration: { min: 0.2 },
@@ -110,12 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // add animations and labels to the timeline
   tl.addLabel("start")
-    .to(".intro__content-title", { translateY: -50 })
-    .to(".intro__content-text", { translateY: -250 }, 'start')
+    .to(".intro__content-title", { translateY: '-15vh' })
+    .to(".intro__content-text", { top: '-10vh' }, 'start')
 
   tl.addLabel("middle")
-    .to(".intro__absoluteImg--left", { translateY: -560 }, "middle")
-    .to(".intro__absoluteImg--right", { translateY: -760 }, "middle")
+    .to(".intro__absoluteImg--left", { translateY: '-80vh' }, "middle")
+    .to(".intro__absoluteImg--right", { translateY: '-100vh' }, "middle")
 
   tl.add(() => {
     animDepixelate(document.querySelector('.intro__absoluteImg--left'))
